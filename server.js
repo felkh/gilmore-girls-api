@@ -291,6 +291,10 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
+app.get('/api', (req, res) => {
+  res.json(seasonalEpis)
+})
+
 app.get('/api/:season', (req, res) => {
   const whichSeason = req.params.season.toLowerCase()
   if ( seasonalEpis[whichSeason]){
