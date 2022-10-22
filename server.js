@@ -288,7 +288,7 @@ const seasonalEpis = {
 
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.ejs')
+  res.sendFile(__dirname + '/index.html')
 })
 
 app.get('/api/:season', (req, res) => {
